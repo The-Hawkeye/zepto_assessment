@@ -1,8 +1,4 @@
 .gap-1{
-    /* border-radius: 25%;
-    background-color: blue;
-    height: 50px;
-    text-align: center; */
     display: flex;
     justify-content: center;
     align-items: center;

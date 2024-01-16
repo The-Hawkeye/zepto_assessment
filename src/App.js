@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import Chip from './component/ChipComponent'; // Import Chip component
 import Dropdown from './component/Dropdown'; // Import Dropdown component
@@ -66,7 +67,7 @@ const App = () => {
         </div>
         <div className='container mx-auto'>
             <div className='flex w-full flex-wrap gap-2'>
-                <div className="flex flex-wrap">
+                <div className="flex flex-wrap pill-container">
                     {selectedItems.map(item => (
                         <Chip
                             key={item.email}
@@ -87,7 +88,6 @@ const App = () => {
                         placeholder="Search for people..."
                         className='border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500'
                     />
-                     <hr/>
                     <Dropdown items={filteredItems} onSelect={handleSelectItem} />
                 </div>
             </div>
