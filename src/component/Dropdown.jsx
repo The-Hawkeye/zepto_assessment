@@ -10,23 +10,23 @@ const Dropdown = ({ items, onSelect }) => {
     };
 
     return (
-        <div>
+        <div className='search-div'>
             <ul>
                 {items.slice(0, visibleItems).map(item => (
                     <li key={item.email} onClick={() => onSelect(item)} className='cursor-pointer'>
-                    <div className='flex justify-between searchResult'>
+                    <div className='flex searchResult'>
                         <div className='img-container'>
                             <img className="img-tag" src={item.image_url}></img>
                             <span>{item.name}</span>
                         </div>
-                        <span className='text-gray-500'>{item.email}</span>
+                        <div className='email-info'><span className='text-gray-500'>{item.email}</span></div>
                     </div>
                     </li>
                 ))}
             </ul>
-            {visibleItems < items.length && (
+            {/* {visibleItems < items.length && (
                 <button onClick={handleShowMore}>Show More</button>
-            )}
+            )} */}
         </div>
     );
 };

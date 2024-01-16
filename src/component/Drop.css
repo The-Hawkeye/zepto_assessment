@@ -10,12 +10,25 @@
 
 .img-container{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     margin-right: 40px;
+    width: 200px;
 }
 
 .searchResult{
     display: flex;
     align-items: center;
+    margin: 8px;
+
+}
+
+
+.email-info{
+    text-align: left;
+}
+
+.search-div{
+    overflow: scroll;
+    height: 240px;
 }
