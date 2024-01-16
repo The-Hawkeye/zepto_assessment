@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./Drop.css"
 
 // Dropdown component with a maximum of 5 items displayed
 const Dropdown = ({ items, onSelect }) => {
@@ -13,8 +14,11 @@ const Dropdown = ({ items, onSelect }) => {
             <ul>
                 {items.slice(0, visibleItems).map(item => (
                     <li key={item.email} onClick={() => onSelect(item)} className='cursor-pointer'>
-                    <div className='flex justify-between'>
-                        <span>{item.name}</span>
+                    <div className='flex justify-between searchResult'>
+                        <div className='img-container'>
+                            <img className="img-tag" src={item.image_url}></img>
+                            <span>{item.name}</span>
+                        </div>
                         <span className='text-gray-500'>{item.email}</span>
                     </div>
                     </li>
